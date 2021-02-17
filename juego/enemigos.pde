@@ -1,4 +1,3 @@
-
 class enemigos {
 
   float x;

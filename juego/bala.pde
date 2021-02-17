@@ -1,38 +1,31 @@
-class Bala{
- PVector pos;
- int speed = 8;
- boolean tp;
- float yfin;
- float xfin;
- Bala(float x, float y,float xstop, float ystop){
-  pos= new PVector(x,y);
-  yfin=ystop;
-  xfin=xstop;
+class Bala {
+  PVector pos;
+  PVector vel;
+  int speed = 50;
+  boolean tp;
+  float angle;
+  //float yfin;
+  //float xfin;
+  Bala(float x, float y, float xstop, float ystop) {
+    pos = new PVector(x, y);
+    vel = new PVector(xstop-x,ystop-y);
+    vel.normalize();
+    vel.mult(speed);
+    angle = atan( (ystop - y) / (x - xstop) );
+  }
 
- }
-
- void update(){
+  void update() {
+    pushMatrix();
+    translate(pos.x,  pos.y);
+    image(bala2, 0, 0, 60, 20);
+    rotate(angle);
     
-      image(bala2, pos.x, pos.y, 80, 20);
-    if(pos.x>xfin){
-      pos.x = pos.x - 15;
-    }else if(pos.x<xfin){
-      pos.x = pos.x - 15;
-    }
-    if(pos.y<yfin){
-     pos.y=pos.y+0.3*sqrt(400^2+(1200-int(xfin))^2); 
-    }
-   
-   if (pos.x > 0 && pos.x < width && pos.y > 0 && pos.y < height) {
-     
-    }
-    else {
+    popMatrix();
+    pos.add(vel);
+
+    if (pos.x > 0 && pos.x < width && pos.y > 0 && pos.y < height) {
+    } else {
       balas.remove(b);
     }
-
-   
-     
-  
- }
-  
+  }
 }
