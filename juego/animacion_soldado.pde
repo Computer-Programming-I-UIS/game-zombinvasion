@@ -22,7 +22,7 @@ class soldado {
     }
   }
 
-  // Métodos de la clase
+  // MÃŠtodos de la clase
   void dibujar() {
 
     image(images[imagesIndex], posX, posY, 150, 110);
@@ -31,6 +31,7 @@ class soldado {
   void mousePressed() {
     imagesIndex = (imagesIndex+1)%images.length;
     if (!disparo) disparo = true;
+    
   }
   
   void mouseReleased() {

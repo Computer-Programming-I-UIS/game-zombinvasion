@@ -1,19 +1,38 @@
-class bala{
+class Bala{
+ PVector pos;
+ int speed = 8;
+ boolean tp;
+ float yfin;
+ float xfin;
+ Bala(float x, float y,float xstop, float ystop){
+  pos= new PVector(x,y);
+  yfin=ystop;
+  xfin=xstop;
 
-int startX = 1100; // Initial x coordinate
-int stopX = mouseX; // Final x coordinate
-int startY = 200; // Initial y coordinate
-int stopY = mouseY; // Final y coordinate
+ }
 
-float step = 0.005; // Size of each step (0.0 to 1.0)
-float pct = 0.0; // Percentage traveled (0.0 to 1.0)
+ void update(){
+    
+      image(bala2, pos.x, pos.y, 80, 20);
+    if(pos.x>xfin){
+      pos.x = pos.x - 15;
+    }else if(pos.x<xfin){
+      pos.x = pos.x - 15;
+    }
+    if(pos.y<yfin){
+     pos.y=pos.y+0.3*sqrt(400^2+(1200-int(xfin))^2); 
+    }
+   
+   if (pos.x > 0 && pos.x < width && pos.y > 0 && pos.y < height) {
+     
+    }
+    else {
+      balas.remove(b);
+    }
 
-bala(){
-  bala(float posX_final; float posY_final); 
-float x = posX_final; // Current x coordinate
-float y = posY_final; // Current y coordinate
-
-
-
-
+   
+     
+  
+ }
+  
 }
