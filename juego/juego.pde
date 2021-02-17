@@ -1,9 +1,10 @@
+import ddf.minim.*;
 int x= -100, b, ventana=0;
 int z=1000;
 int l=200;
 int space=30;
 int y=500;
-float speed= 5;
+float speed= 50;
 PImage zombies2;
 PImage fondo;
 enemigos[] zombies;
@@ -12,6 +13,9 @@ PImage ciudad1;
 PImage soldado1;
 PImage bala2;
 ArrayList<Bala> balas;
+Minim minim;
+AudioPlayer[] s;
+
 
 // Objeto de la clase soldado
 soldado pepito;
@@ -39,10 +43,16 @@ void setup() {
   soldado1= loadImage("soldado1.png");
   bala2= loadImage("bala2.png");
   fondo= loadImage("fondo.jpg");
+  minim = new Minim(this);
+ s=new AudioPlayer[20];
+ s[0] = minim.loadFile("temainicio.mp3");
 }
 
 void draw() {
   if (ventana==1) {
+    if(s[0].isPlaying()){
+      s[0].pause();
+    }
     image(ciudad1, 0, 0, 1300, 600);
     image(tanque, 900, 300, 450, 300);
     for (b = balas.size()-1; b >= 0; b--) {
@@ -50,6 +60,11 @@ void draw() {
       bala.update();
     }
     pepito.dibujar();
+    text("VIDA: "+str(pepito.vida),10,20);
+    text("VENECOS DEPORTADOS A BALA: "+str(pepito.score),10,50);
+    if(pepito.vida<=0){
+    ventana=3;
+    }
     for (int i=0; i < 10; i ++) {
       zombies[i].movimiento();
       for (int j = balas.size()-1; j >= 0; j--) {
@@ -69,7 +84,11 @@ void draw() {
     menu();
   }
   else if(ventana==2){
-  
+  creditos();
+  }
+  else if(ventana==3){
+  background(0);
+  text("¡HAS MUERTO!",500,500);
   }
 }
 

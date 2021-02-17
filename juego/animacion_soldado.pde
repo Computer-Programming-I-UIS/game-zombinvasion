@@ -2,7 +2,9 @@ class soldado {
   // Atributos de la clase
   int maxImages = 2;
   int imagesIndex= 1;
+  float vida=200;
   int posX, posY;
+  int score=0;
   PImage[] images = new PImage[maxImages];
   boolean disparo = false;
 
