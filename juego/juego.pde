@@ -61,7 +61,7 @@ void draw() {
     }
     pepito.dibujar();
     text("VIDA: "+str(pepito.vida),10,20);
-    text("VENECOS DEPORTADOS A BALA: "+str(pepito.score),10,50);
+    text("ZOMBIS ASESINADOS: "+str(pepito.score),10,50);
     if(pepito.vida<=0){
     ventana=3;
     }
