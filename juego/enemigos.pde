@@ -1,26 +1,48 @@
 class enemigos {
 
+  int vida;
+  int z;  
   float x;
   float y=500; 
-  float speed=random(1,5); 
+  float speed=random(1, 5); 
   boolean vivo=true;
   enemigos(float tempX) {
     x = tempX;
+    z = (int) random(0, 3.9);
+    vida=z;
   }
 
   void movimiento() {
-  if(vivo==false){
-  x=random(-100,-500);
-  vivo=true;
-  pepito.score+=1;
-  }
-  if(x>900&&x<1000){
-  pepito.vida-=10;
-  x = random(-500,-1000);
-  }
+    if (vivo==false) {
+      x=random(-100, -500);
+      vivo=true;
+      pepito.score+=1;
+    }
+    if (x>900&&x<1000) {
+      pepito.vida-=10;
+      x = random(-500, -1000);
+    }
     x += speed;
-    if(vivo){
-      image(zombies2, x, y, 100, 100);
+
+    if (vivo) {
+      switch(z) {
+
+      case 1:
+        image(zombie2, x, y, 100, 100);
+        break;
+
+      case 2:
+        image(zombie1, x, y, 100, 100);
+        break;
+
+      case 3:
+        image(zombie3, x, y, 100, 100);
+        break;
+      }
     }
+    if(vida<=0){
+    vivo=false;
+    
     }
   }
+}
