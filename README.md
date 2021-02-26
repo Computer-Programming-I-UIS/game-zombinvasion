@@ -36,5 +36,6 @@ CREDITOS:
 
 Karen castillo
 Nicolás Escobar
+Cristian Chavez 
 imagenes: https://wall.alphacoders.com/big.php?i=371457&lang=Spanish
 música: https://www.youtube.com/watch?v=mZ3Od2th79U
