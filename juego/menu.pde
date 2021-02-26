@@ -6,9 +6,9 @@ void menu() {
 
 
   image(fondo, 0, 0, 1600, 600);
+  image(edad, 1000,450,150,150);
   fill(255);
-  text("PRESIONE P PARA INICIAR", 200, 500);
-  text("PRESIONE C PARA VER LOS CREDITOS", 200, 300);
+ 
     jugarb.place();
   salir.place();
   credit.place();
@@ -18,7 +18,7 @@ void keyPressed() {
     switch(keyCode) {
     case 'p':
     case 'P':
-
+    textFont(titulo);
       if (!s[0].isPlaying()) {
         s[0].rewind();
         if (s[2].isPlaying()) {
@@ -31,7 +31,7 @@ void keyPressed() {
 
     case 'c':
     case 'C':
-
+    textFont(titulo);
       if (!s[0].isPlaying()) {
         s[0].rewind();
         if (s[2].isPlaying()) {
@@ -58,4 +58,5 @@ void creditos() {
   text("AUTOR: DANIEL OCHOA Y JUAN ARENAS", 500, 100);
   text("INTRO DEL JUEGO: PINTEREST", 500, 300);
   text("DIBUJOS TANQUE, SOLDADO Y BALA: NICOLAS ESCOBAR", 500, 500);
+  text("CREDITOS: NICOLAS ESCOBAR,CRISTIAN CHAVEZ, TU CUPIDO BB", 500,500);
 }

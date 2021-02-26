@@ -12,7 +12,7 @@ PImage zombie3;
 PImage fondo;
 PImage creditos;
 PImage bala3;
-
+PImage edad;
 Boton jugarb, salir, credit;
 enemigos[] zombies;
 PImage tanque;
@@ -53,7 +53,8 @@ credit=new Boton("Creditos",300,350,100,30,15,17,2);
   }
   balas = new ArrayList<Bala>(); 
   bala3 = loadImage("bala3.png");
-  ciudad1= loadImage("ciudad1.jpg");  
+  ciudad1= loadImage("ciudad1.jpg"); 
+  edad = loadImage("edad.png");
   zombie2 = loadImage("zombie2.png");
   zombie3 = loadImage("zombie3.png");
   zombie1 = loadImage("zombie1.png");
