@@ -9,6 +9,9 @@ void menu() {
   fill(255);
   text("PRESIONE P PARA INICIAR", 200, 500);
   text("PRESIONE C PARA VER LOS CREDITOS", 200, 300);
+    jugarb.place();
+  salir.place();
+  credit.place();
 }
 void keyPressed() {
   if (ventana==0||ventana==2) {

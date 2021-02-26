@@ -12,6 +12,8 @@ PImage zombie3;
 PImage fondo;
 PImage creditos;
 PImage bala3;
+
+Boton jugarb, salir, credit;
 enemigos[] zombies;
 PImage tanque;
 PImage ciudad1;
@@ -36,6 +38,9 @@ void setup() {
   cartucho = new Municion();
   pepito = new soldado(1100, 200);
   zombies = new enemigos[15];
+  jugarb=new Boton("Jugar",300,200,100,30,15,17,1);
+salir=new Boton("Salir",300,500,100,30,15,17,-1);
+credit=new Boton("Creditos",300,350,100,30,15,17,2);
   float posicionAnterior = random(-1000, 100);
   for (int i=0; i < 10; i ++) {
     float posicionNueva;
