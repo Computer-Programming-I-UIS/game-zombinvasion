@@ -1,4 +1,6 @@
-AUTORES: DANIEL OCHOA Y JUAN DIEGO ARENAS
+# AUTORES:
+
+DANIEL OCHOA Y JUAN DIEGO ARENAS
 
 # JUEGO : ZOMBIELAND
 
@@ -33,6 +35,6 @@ juego tipo shooter
 CREDITOS: 
 
 Karen castillo
-
+Nicolás Escobar
 imagenes: https://wall.alphacoders.com/big.php?i=371457&lang=Spanish
 música: https://www.youtube.com/watch?v=mZ3Od2th79U
