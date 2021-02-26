@@ -14,10 +14,11 @@ class enemigos {
 
   void movimiento() {
     if (vivo==false) {
-      x=random(-100, -500);
+      x=random(-100, -300);
       vivo=true;
-      pepito.score+=1;
+      
     }
+
     if (x>900&&x<1000) {
       pepito.vida-=10;
       x = random(-500, -1000);
@@ -40,9 +41,9 @@ class enemigos {
         break;
       }
     }
-    if(vida<=0){
-    vivo=false;
-    
+    if (vida<=0) {
+      vivo=false;
+      
     }
   }
 }

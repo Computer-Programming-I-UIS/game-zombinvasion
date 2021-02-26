@@ -24,7 +24,7 @@ class soldado {
     }
   }
 
-  // MÃŠtodos de la clase
+  // Metodos de la clase
   void dibujar() {
 
     image(images[imagesIndex], posX, posY, 150, 110);

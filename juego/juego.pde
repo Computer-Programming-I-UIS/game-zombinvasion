@@ -5,10 +5,12 @@ int l=200;
 int space=30;
 int y=500;
 float speed= 50;
+PFont titulo;
 PImage zombie2;
 PImage zombie1;
 PImage zombie3;
 PImage fondo;
+PImage creditos;
 PImage bala3;
 enemigos[] zombies;
 PImage tanque;
@@ -19,6 +21,7 @@ ArrayList<Bala> balas;
 Minim minim;
 AudioPlayer[] s;
 AudioPlayer[] sonidobala;
+AudioPlayer[] sonido1;
 
 
 // Objeto de la clase soldado
@@ -53,10 +56,12 @@ void setup() {
   soldado1= loadImage("soldado1.png");
   bala2= loadImage("bala2.png");
   fondo= loadImage("fondo.jpg");
-  minim = new Minim(this);
+  creditos = loadImage("fondocreditos.jpg");
+  titulo = createFont("fuente.ttf",20);
+  minim = new Minim(this);//musica del juego
   s=new AudioPlayer[20];
-  s[1] = minim.loadFile("sonidobala.mp3");
   s[0] = minim.loadFile("temainicio.mp3");
+  s[1] = minim.loadFile("sonidobala.mp3");
   s[2] = minim.loadFile("sonido1.mp3");
   
 }
@@ -98,6 +103,7 @@ void draw() {
     menu();
   } else if (ventana==2) {
     creditos();
+    
   } else if (ventana==3) {
     background(0);
     text("¡HAS MUERTO!", 500, 500);
