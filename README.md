@@ -32,7 +32,7 @@ para mayores de 12 años
 juego tipo shooter 
 
 
-CREDITOS: 
+# CREDITOS: 
 
 Karen castillo
 Nicolás Escobar
